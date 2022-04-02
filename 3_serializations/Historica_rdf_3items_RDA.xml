@@ -1,0 +1,233 @@
+@base <https://amshistorica.unibo.it/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm:<http://www.cidoc-crm.org/Version/version-7.0.1/> . #7.0.1 oct 2020
+@prefix schema: <https://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/spec/> .
+@prefix lrmoo: <http://www.cidoc-crm.org/frbroo/ModelVersion/lrmoo-f.k.a.-frbroo-v.0.7> . #7.1.1 jun 2021
+@prefix bcco:   <http://dati.beniculturali.it/cis/> . #Cultural-ON (Cultural ONtology)
+@prefix rdac:   <http://rdaregistry.info/Elements/c/> .
+@prefix rdaw:   <http://rdaregistry.info/Elements/w/> .
+@prefix rdae:   <http://rdaregistry.info/Elements/e/> .
+@prefix rdam:   <http://rdaregistry.info/Elements/m/> .
+@prefix rdai:   <http://rdaregistry.info/Elements/i/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+
+
+#Authors
+
+<agents/Author/Aldrovandi_Ulisse> a rdac:C10004 ; #person
+	rdfs:label "Aldrovandi, Ulisse" ;
+	foaf:givenName "Ulisse" ;
+	foaf:familyName "Aldrovandi" ;
+	owl:sameAs <http://viaf.org/viaf/100190422>, <https://lccn.loc.gov/n50035572> .
+
+<agents/Author/Uterverio_GiovanniCornelio> a rdac:C10004 ; #person	
+	rdfs:label "Uterverio, Giovanni Cornelio 1592-1619" ;
+	foaf:givenName "Giovanni Cornelio" ;
+	foaf:familyName "Uterverio" ;
+	owl:sameAs <http://viaf.org/viaf/9730643> .
+
+#Agents Typographer
+
+<agents/Typographer/Tamburini_Girolamo> a rdac:C10004 ; #person
+	rdfs:label "Tamburini, Girolamo" ;
+	foaf:givenName "Girolamo" ;
+	foaf:familyName "Tamburini" ;
+	owl:sameAs <http://viaf.org/viaf/72323243> ;
+	org:headOf <agents/typography/Girolamo_Tamburini> . 
+
+<agents/Typographer/Bellagamba_GiovanniBattista> a rdac:C10004 ; #person	
+	rdfs:label "Bellagamba,Giovanni Battista" ;
+	foaf:givenName "Giovanni Battista" ;
+	foaf:familyName "Bellagamba" ;
+	owl:sameAs <http://viaf.org/viaf/97661849> ;
+	org:headOf <agents/typography/GiovanniBattista_Bellagamba> . 
+
+
+#Agents Typography (corporate)
+
+<agents/typograpy/ex_Laelii_a_Vulpe> a rdac:C10005 ; #corporate body
+	rdfs:label "ex typographia Laelii a Vulpe" ;
+	org:hasSite <places/city/Bologna> .
+
+<agents/typography/GiovanniBattista_Bellagamba> a rdac:C10005 ; #corporate body
+	rdfs:label "apud Ioannem Baptistam Bellagambam" ;
+	org:hasSite <places/city/Bologna> ;
+	owl:sameAs <http://viaf.org/viaf/2120145857132522922329> .	
+
+<agents/typography/Girolamo_Tamburini> a rdac:C10005 ; #corporate body
+	rdfs:label "Hieronymi Tamburini" ;
+	org:hasSite <places/city/Bologna> .	
+
+
+#Agents Rights Holders
+
+<agents/RightsHolders/Università_di_Bologna> a rdac:C10005 ; #corporate body
+	rdfs:label "Alma Mater Studiorum – Università di Bologna" ;
+	org:hasSite <places/City/Bologna> ;
+	owl:sameAs <http://viaf.org/viaf/155886025> ;
+	lrmoo:R4 <items/Periodico/1> , <items/Monografia/17> , <items/Monografia/26> , <items/Monografia/197> .
+
+#Agents Libraries
+ 
+<agents/Library/BO404> a bcco:Library ;
+	rdfs:label "Biblioteca di Matematica, Fisica, Astronomia e Informatica. Sezione di Astronomia \"Guido Horn d'Arturo\"" ;
+	owl:sameAs <https://dati.beniculturali.it/iccu/anagrafe/resource/Library/IT-BO0427> ;
+	foaf:isPrimaryTopicOf <https://acnpsearch.unibo.it/library/BO404> .
+
+<agents/Library/BO402> a bcco:Library ;
+	rdfs:label "Biblioteca del Dipartimento di Scienze biologiche, geologiche e ambientali - BiGeA" ;
+	owl:sameAs <https://dati.beniculturali.it/iccu/anagrafe/resource/Library/IT-BO0429> ;
+	foaf:isPrimaryTopicOf <https://acnpsearch.unibo.it/library/BO402> .
+
+<agents/Library/BO001> a bcco:Library ;
+	rdfs:label "Biblioteca Universitaria di Bologna" ;
+	owl:sameAs <https://dati.beniculturali.it/iccu/anagrafe/resource/Library/IT-BO0098> ;
+	foaf:isPrimaryTopicOf <https://acnpsearch.unibo.it/library/BO001> .
+
+#Places
+
+<places/city/Bologna> a dcterms:Location ;
+	rdfs:label "Bologna"@it ;
+	owl:sameAs <https://www.geonames.org/6541998/bologna.html> .
+
+#RightsStatement
+
+<RightsStatement/001> a dcterms:RightsStatement ;
+	rdfs:label "E' vietato riprodurre o duplicare le immagini consultabili nel sito senza l'autorizzazione scritta delle Biblioteche proprietarie." .
+
+#Collections
+
+<items/Collezione/comm> a dcterms:BibliographicResource ;
+	rdfs:label "De Bononiensi scientiarum et artium Instituto atque Academia commentarii (1731-1791)" ;
+	dcterms:hasPart <items/Periodico/1> .
+	
+<items/Collezione/aldrovandimanoscritti> a dcterms:BibliographicResource ;
+	rdfs:label "Ulisse Aldrovandi Manoscritti" ;
+	dcterms:hasPart <items/Monografia/197>, <items/Monografia/198>, <items/Monografia/199>.
+
+<items/Collezione/aldr:stamp> a dcterms:BibliographicResource ;
+	rdfs:label "Ulisse Aldrovandi, opere a stampa" ;
+	dcterms:hasPart <items/Monografia/17>, <items/Monografia/26> .
+
+#Expressions, manifestations, items
+
+#1 Journal: starting from E level
+
+_:e1 a rdac:C10006 ; #expression 
+	rdae:P20059 _:m1 , <items/Periodico/1>.
+	
+_:m1 a rdac:C10007;  #"manifestation" 
+    dcterms:title "De Bononiensi Scientiarum et Artium instituto atque academia commentarii" ;
+    dcterms:description "De Bononiensi scientiarum et artium Instituto atque academia commentarii. - T.1 (1731)-t. 7 (1791). - Bononiae : ex typographia Laelii a Vulpe, 1731-1791. - 28 cm. ((Irregolare." ;
+    dcterms:publisher <agents/typograpy/ex_Laelii_a_Vulpe> ;
+      dcterms:date "1731" ;
+      dcterms:type "Periodico" ;
+      dcterms:format <https://www.iana.org/assignments/media-types/text/html> ;
+	  dcterms:identifier "1122-4150" ; #issn
+      dcterms:language <https://iso639-3.sil.org/code/lat> ;
+      dcterms:relation "http://amshistorica.unibo.it/1" ;
+	  rdam:P30005 <https://acnpsearch.unibo.it/journal/34096>; #has preferred citation
+	  rdam:P30005 <https://sol.unibo.it/SebinaOpac/resource/UBO2846137>; #has preferred citation
+	  rdam:P30005 <http://id.sbn.it/bid/TO00182608>; #has preferred citation
+	  rdam:P30103 _:i1. #
+
+_:i1 a rdac:C10003 ; #item
+	rdai:P40021 <agents/Library/BO404> ; #has owner agent
+	rdai:P40001 "MUSEO.ANT    CC.  0006" ; #has identifier for item
+	rdai:P40087 <items/Periodico/1>. #has digital transfer of item
+
+#17 Book: starting from W level
+
+_:w17 a rdac:C10001 ; #work
+	rdaw:P10065 <agents/Author/Aldrovandi_Ulisse> ; #has creator agent of work
+	rdaw:P10078 _:e17 . #has expression of work
+	
+_:e17 a rdac:C10006 ; #expression 
+	rdae:P20059 _:m17 , <items/Monografia/17> .
+	
+_:m17 a rdac:C10007;  #"manifestation" 
+    dcterms:title "De piscibus libri 5. et De cetis lib. vnus. Ioannes Cornelius Vteruerius ... collegit. Hieronymus Tamburinus in lucem edidit ... Cum indice copiosissimo" ;
+    dcterms:description "Vlyssis Aldrouandi ... *De piscibus libri 5. et De cetis lib. vnus. Ioannes Cornelius Vteruerius ... collegit. Hieronymus Tamburinus in lucem edidit ... Cum indice copiosissimo. - Bononiae : apud Bellagambam : [Girolamo Tamburini], 1613 (Bononiae : apud Ioannem Baptistam Bellagambam : sumptibus Hieronymi Tamburini, 1612). - [8], 372 [i.e. 732], [28] p. : ill. ; fol. ((Nel tit. 5. espresso V. - Front. calcogr. con stemma del dedicatario, cardinale Marco Sittico Altemps. - Marca (V5) in fine. - Cors. ; gr. ; rom. - Segn.: pi greco4 A-3Q6 3R8." ;
+    dcterms:publisher <agents/typography/Girolamo_Tamburini> , <agents/typography/GiovanniBattista_Bellagamba> ;
+    dcterms:contributor <agents/Author/Uterverio_GiovanniCornelio> ;
+    dcterms:date "1613" ;
+    dcterms:type "monografia" ;
+    dcterms:format <https://www.iana.org/assignments/media-types/text/html> ;
+	dcterms:language <https://iso639-3.sil.org/code/lat> ;
+    dcterms:relation "http://amshistorica.unibo.it/17" ;
+	rdam:P30005 <https://sol.unibo.it/SebinaOpac/resource/UBO2845920>; #has preferred citation
+	#rdam:P30005 <http://id.sbn.it/bid/TO00182608>; #has preferred citation
+	rdam:P30103 _:i17. #
+
+_:i17 a rdac:C10003 ; #item
+	rdai:P40021 <agents/Library/BO402> ; #has owner agent
+	rdai:P40001 "ZOV 822" ; #has identifier for item
+	rdai:P40087 <items/Monografia/17>. #has digital transfer of item
+
+#197 Manuscript: starting from W level, M and I level merged
+
+_:w197 a rdac:C10001 ; #work
+	rdaw:P10065 <agents/Author/Aldrovandi_Ulisse> ; #has creator agent of work
+	dcterms:subject <http://id.loc.gov/authorities/subjects/sh85015976> ;
+    rdaw:P10078 _:e197 . #has expression of work
+	
+_:e197 a rdac:C10006 ; #expression 
+	rdae:P20059 _:m197 , <items/Monografia/197>.
+	
+_:m197 a rdac:C10007, rdac:C10003, bf:Manuscript;  #manifestation, item, manuscript
+	dcterms:title "Bologna, Biblioteca Universitaria, ms. Aldrovandi 112" ;
+    dcterms:creator <agents/Author/Aldrovandi_Ulisse> ;
+    dcterms:description "http://manus.iccu.sbn.it//opac_SchedaScheda.php?ID=197826" ;
+    dcterms:date "1550-1605" ;
+    dcterms:type "monografia" ;
+    dcterms:format <https://www.iana.org/assignments/media-types/text/html> ;
+    dcterms:identifier "http://amshistorica.unibo.it/197" ;
+    dcterms:language <https://iso639-3.sil.org/code/lat> ;
+    dcterms:relation "http://amshistorica.unibo.it/197" ;
+	rdam:P30005 <https://sol.unibo.it/SebinaOpac/resource/UBO2845920>; #has preferred citation
+	rdai:P40021 <agents/Library/BO001> ; #has owner agent
+	rdai:P40001 "ID:197826" ; #has identifier for item
+	rdai:P40087 <items/Monografia/197>. #has digital transfer of item
+
+
+#Items
+  
+<items/Periodico/1> a rdac:C10007 ; #manifestation
+	dcterms:title "De Bononiensi Scientiarum et Artium instituto atque academia commentarii" ;
+    dcterms:format <https://www.iana.org/assignments/media-types/text/html> ; #cambiare
+	dcterms:identifier "http://amshistorica.unibo.it/1" ;
+    dcterms:language <https://iso639-3.sil.org/code/lat> ;
+    dcterms:relation _:m1 ;
+	dcterms:accessRights <RightsStatement/001> ;
+	rdam:P30141 <agents/Library/BO404> ; #has contact information
+    dcterms:rightsHolders <agents/RightsHolders/Università_di_Bologna> ;
+	rdam:P30117 <agents/RightsHolders/Università_di_Bologna> . #has statement of responsibility
+     
+<items/Monografia/17> a rdac:C10007; #manifestation
+    dcterms:title "De piscibus libri 5. et De cetis lib. vnus. Ioannes Cornelius Vteruerius ... collegit. Hieronymus Tamburinus in lucem edidit ... Cum indice copiosissimo" ;
+    dcterms:format <https://www.iana.org/assignments/media-types/text/html> ;
+	dcterms:identifier "http://amshistorica.unibo.it/17" ;
+    dcterms:language <https://iso639-3.sil.org/code/lat> ;
+    dcterms:relation _:m17 ;
+	dcterms:accessRights <RightsStatement/001> ;
+    rdam:P30141 <agents/Library/BO404> ; #has contact information
+    dcterms:rightsHolders <agents/RightsHolders/Università_di_Bologna> ;
+	rdam:P30117 <agents/RightsHolders/Università_di_Bologna> . #has statement of responsibility
+	
+<items/Monografia/197> a rdac:C10007; #manifestation
+	dcterms:title "Bologna, Biblioteca Universitaria, ms. Aldrovandi 112" ;
+    dcterms:format <https://www.iana.org/assignments/media-types/text/html> ;
+    dcterms:identifier "http://amshistorica.unibo.it/197" ;
+    dcterms:language <https://iso639-3.sil.org/code/lat> ;
+    dcterms:relation _:m197 ;
+	dcterms:accessRights <RightsStatement/001> ;
+	rdam:P30141 <agents/Library/BO001> ; #has contact information
+    dcterms:rightsHolders <agents/RightsHolders/Università_di_Bologna> ;
+	rdam:P30117 <agents/RightsHolders/Università_di_Bologna> . #has statement of responsibility
