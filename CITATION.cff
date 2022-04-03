@@ -1,9 +1,8 @@
-@misc{Zani_SDL_2022,
-  author = {Zani, Enrica},
-  title = {AMS Historica. A(n imaginary) migration journey},
-  year = {2022},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/enri-ca/Historica_pro/}},
-  commit = {}
-}
+cff-version: 1.2.0
+message: "If you use this files, please cite it as below."
+authors:
+- family-names: "Zani"
+  given-names: "Enrica"
+title: "AMS Historica. A(n imaginary) migration journey"
+date-released: 2022-04-04
+url: "https://github.com/enri-ca/Historica_pro"
