@@ -5,9 +5,6 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-#@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-#@prefix crm:<http://www.cidoc-crm.org/Version/version-7.0.1/> . #7.0.1 oct 2020
-#@prefix schema: <https://schema.org/> .
 @prefix foaf: <http://xmlns.com/foaf/spec/> .
 @prefix lrmoo: <http://www.cidoc-crm.org/frbroo/ModelVersion/lrmoo-f.k.a.-frbroo-v.0.7> . #7.1.1 jun 2021
 @prefix bcco:   <http://dati.beniculturali.it/cis/> . #Cultural-ON (Cultural ONtology)
@@ -72,7 +69,7 @@
 	rdfs:label "Alma Mater Studiorum – Università di Bologna" ;
 	org:hasSite <places/City/Bologna> ;
 	owl:sameAs <http://viaf.org/viaf/155886025> ;
-	lrmoo:R4 <items/Periodico/1> , <items/Monografia/17> , <items/Monografia/26> , <items/Monografia/197> .
+	lrmoo:R4 <items/Periodico/1> , <items/Monografia/17> , <items/Monografia/197> .
 
 #Agents Libraries
  
