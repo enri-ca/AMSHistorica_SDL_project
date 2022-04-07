@@ -1,0 +1,3 @@
+https://amshistorica.unibo.it/oai/oai2.php?verb=ListRecords&metadataPrefix=oai_dc
+
+https://amshistorica.unibo.it/oai/oai2.php?verb=ListRecords&metadataPrefix=pico
